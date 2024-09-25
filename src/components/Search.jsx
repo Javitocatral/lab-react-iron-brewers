@@ -1,4 +1,7 @@
-function Search() {
+function Search({ handleSearch }) {
+  const handleChange = (event) => {
+    handleSearch(event.target.value)
+  }
   return (
     <div className="d-inline-flex justify-content-center align-items-center w-100 p-4">
       <div className="input-group mb-2 w-50">
@@ -10,10 +13,11 @@ function Search() {
         <input
           type="text"
           className="form-control search-bar"
+          onChange={handleChange}
         />
       </div>
     </div>
-  );
+  )
 }
 
-export default Search;
+export default Search
