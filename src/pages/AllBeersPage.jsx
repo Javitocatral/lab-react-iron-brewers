@@ -19,7 +19,7 @@ function AllBeersPage() {
         console.log(error)
       })
     getBeerSearch()
-  }, [])
+  }, [searchQuery])
 
   const getBeerSearch = async () => {
     try {
